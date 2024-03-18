@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Sudo-Ivan/mind-website',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -89,8 +89,8 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Matrix',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Main Website',
+              href: 'https://ivanryan.dev',
             },
           ],
         },
@@ -116,6 +116,12 @@ const config: Config = {
       additionalLanguages: ['bash', 'python', 'rust', 'go'],
     },
   } satisfies Preset.ThemeConfig,
+  themes: ['@docusaurus/theme-mermaid'],
+  // In order for Mermaid code blocks in Markdown to work,
+  // you also need to enable the Remark plugin with this option
+  markdown: {
+    mermaid: true,
+  },
 };
 
 export default config;
